@@ -1,0 +1,6 @@
+{
+  "name": "gia-linh-kien",
+  "workspaces": [
+    "app/*"
+  ]
+}
