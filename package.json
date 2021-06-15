@@ -2,5 +2,12 @@
   "name": "gia-linh-kien",
   "workspaces": [
     "app/*"
-  ]
+  ],
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  },
+  "scripts": {
+    "frontend": "yarn workspace frontend start",
+    "start": "concurrently --kill-others-on-fail \"yarn frontend\""
+  }
 }
