@@ -1,0 +1,19 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn --transpile-only --clear ./src/index.ts",
+    "heroku-postbuild": "tsc --project tsconfig.production.json && npm run copy-static-assets",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.3.2"
+  }
+}
