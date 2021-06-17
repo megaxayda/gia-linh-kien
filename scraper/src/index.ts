@@ -1,5 +1,5 @@
-import { createUser, showUser, User } from 'shared';
+import cron from 'node-cron';
 
-const user: User = createUser('t7yang', 18);
-
-showUser(user);
+cron.schedule('* * * * *', () => {
+  console.log('running a task every minute');
+});
